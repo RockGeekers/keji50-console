@@ -27,9 +27,19 @@
 		<fastjson.version>1.1.41</fastjson.version> 
 		<slf4j.version>1.7.5</slf4j.version>
 		<logback.version>1.0.8</logback.version>
+		<ueditor.version>1.1.0</ueditor.version>
 	</properties>
+	
+	<repositories>
+		<repository>
+			<id>local</id>
+			<name>Repository in project's repos dir</name>
+			<layout>default</layout>
+			<url>${project.baseUri}repos</url>
+		</repository>
+	</repositories>
+	
 	<dependencies>
-
 		<!-- WEB标包 本地调试注释掉javax.servlet、javax.servlet.jsp、javax.el -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -212,6 +222,11 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.baidu.ueditor</groupId>
+			<artifactId>ueditor</artifactId>
+			<version>${ueditor.version}</version>
 		</dependency>
 	</dependencies>
 

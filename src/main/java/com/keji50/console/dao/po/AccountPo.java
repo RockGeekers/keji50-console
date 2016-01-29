@@ -25,8 +25,10 @@ public class AccountPo {
     /**
      * 用户登录名
      */
-    private String username;
+    private String realname;
 
+    private String phone;
+    
     /**
      * 用户邮箱
      */
@@ -45,7 +47,7 @@ public class AccountPo {
     /**
      * 用户状态
      */
-    private int status;
+    private String status;
 
     public String getImage() {
         return StringUtils.isEmpty(image) ? Constants.DEFAULT_ACCOUNT_IMAGE : image;
@@ -56,10 +58,18 @@ public class AccountPo {
             return nickname;
         }
 
-        if (StringUtils.isNotEmpty(username)) {
-            return username;
+        if (StringUtils.isNotEmpty(realname)) {
+            return realname;
+        }
+        
+        if (StringUtils.isNotEmpty(phone)) {
+            return phone;
+        }
+        
+        if (StringUtils.isNotEmpty(email)) {
+            return email;
         }
 
-        return email;
+        return String.valueOf(id);
     }
 }

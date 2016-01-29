@@ -26,11 +26,12 @@
 
 	<!-- 配置静态资源路径 -->
 	<mvc:resources mapping="/static/**" location="/static/" />
+	<mvc:resources mapping="/ueditor/**" location="/ueditor/" />
 	
 	<!-- 配置JSP视图解析器 -->
 	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="prefix" value="/views/" />
 		<property name="suffix" value=".jsp" />
 		<property name="cache" value="true" />
 		<property name="contentType" value="text/html;charset=UTF-8" />
